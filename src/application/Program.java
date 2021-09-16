@@ -40,6 +40,11 @@ public class Program {
 		sellerDao.insert(newSeller);
 		System.out.println("Inserted: New id = " + newSeller.getId());
 		
+		System.out.println("======= TEST 5: Seller Update");
+		seller = sellerDao.findById(1);
+		seller.setName("EDUARDO BORGES");
+		sellerDao.update(seller);
+		System.out.println("Update Completed");
 	}
 
 }
